@@ -12,6 +12,9 @@
 <style>
     body {
         background: url('MAYER (1).png');
+        display: flex;
+        flex-direction: column;
+
     }
 
     .aboutme {
@@ -38,18 +41,27 @@
         margin-top: 0;
     }
 
-    .intro {
+    /*.intro {
         position: relative;
         display: inline-block;
+    }*/
+    .intro{
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .aboutlit {
+        border: 2px solid #705634;
         position: absolute;
         top: 46%;
-        left: 52%;
+        left:15%;
+        margin: 2rem;
+       /* left: 52%;*/
+
        max-width: 400px;
         transform: translate(-50%, -50%);
-        color: #9C7A4F;
+        color: #705634;
         /* Change text color as needed */
         /* Optional: Add background with some transparency for better readability */
         
@@ -81,8 +93,8 @@
     }
 
     h1 {
-        color: $feature;
-        font-size: 3.8rem;
+       
+        
         margin-left: 27%;
         text-transform: uppercase;
         letter-spacing: 1rem;
@@ -167,6 +179,7 @@
     .main {
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
     }
 
     .mainleft {
@@ -202,9 +215,7 @@
         font-family: Georgia, 'Times New Roman', Times, serif
     }
 
-    pre a {
-        width: max-content;
-    }
+    
 
     .experience {
         display: none;
@@ -629,6 +640,29 @@ background: linear-gradient(0deg, #B68C57 0%, #806748 100%);
     align-items: center;
     background: url("contact.png");
 }
+@media screen and (max-width: 767px) {
+    .container {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items */
+        padding: 5px; /* Adjust padding for smaller screens */
+    }
+
+    .container a {
+        margin: 5px 0; /* Add spacing between links */
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+    .mainheading{
+        width: 100%;
+        size: .8rem;
+        font-size: .7rem !important;
+        display: none;
+    }
+    .main{
+        display:block;
+        
+    }
+}
+
 
 
 </style>
@@ -637,7 +671,7 @@ background: linear-gradient(0deg, #B68C57 0%, #806748 100%);
     <div class="container blue circleBehind">
         <a href="" onclick="aboutme(event)">ABOUT ME</a>
         <a href="" onclick="work(event)">MY WORKS</a>
-        <a href="mayer ka resume technical.pdf" ref="mayer ka resume technical.pdf" onclick="download(event)"
+        <a href="#" ref="" 
             id="resume">RESUME</a>
         <a onclick="experience(event)">EXPERIENCE</a>
         <a onclick="contactme(event)">CONTACT</a>
@@ -650,7 +684,7 @@ background: linear-gradient(0deg, #B68C57 0%, #806748 100%);
     <div class="main" id="mainhai">
         <div class="mainleft">
             <div class="intro">
-                <img src="book.png" alt="" class="bookimg">
+                
                 <div class="aboutlit">
                     <h2 style="margin-left: 80px; margin-bottom: 45px;">About me</h2>
                     <ul>
@@ -1098,7 +1132,7 @@ background: linear-gradient(0deg, #B68C57 0%, #806748 100%);
             }
 
         }
-        function download(event) {
+       /* function download(event) {
             let ans = confirm("Wanna download my resume?");
             if (ans) {
                 let res = document.createElement('a');
@@ -1108,7 +1142,7 @@ background: linear-gradient(0deg, #B68C57 0%, #806748 100%);
                 res.click();
                 document.body.removeChild(res);
             }
-        }
+        }*/
         function aboutme(event) {
             event.preventDefault(); // Prevent the default link behavior if applicable
             let contactdetails=document.querySelector(".contact");
