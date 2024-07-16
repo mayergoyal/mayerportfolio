@@ -96,8 +96,8 @@
        
         
         margin-left: 27%;
-        text-transform: uppercase;
-        letter-spacing: 1rem;
+       
+        
         color: #907248;
 
 
@@ -651,15 +651,137 @@ background: linear-gradient(0deg, #B68C57 0%, #806748 100%);
         margin: 5px 0; /* Add spacing between links */
         font-size: 14px; /* Adjust font size for smaller screens */
     }
-    .mainheading{
-        width: 100%;
-        size: .8rem;
-        font-size: .7rem !important;
-        display: none;
-    }
+    
     .main{
         display:block;
         
+    }
+}
+/* Common Styles */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    padding: 10px;
+    width: 90%;
+    height: 100%;
+}
+
+.container a {
+    margin: 5px 10px;
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+}
+
+.navbar {
+    width: 100%;
+    height: 4.3rem;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sidebutton {
+    width: 10%;
+    height: 100%;
+    background-color: transparent;
+    opacity: .7;
+    cursor: pointer;
+    transition: transform .2s ease;
+    display: none;
+    margin-left: 90%;
+}
+
+.sidebutton:hover {
+    transform: scale(.95);
+    border: .55px solid black;
+}
+
+.burger {
+    width: 80%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.piece {
+    width: 100%;
+    height: 5px;
+    padding: 3px;
+    background-color: #9C7A4F;
+    border-radius: 25%;
+    margin: 8px;
+}
+.popoutmenu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #705634;
+    z-index: 1000;
+    position: relative;
+    margin-left: 80%;
+    width: 20%;
+    height: 100vh;
+    opacity: .7;
+    display: none;
+    
+}
+.popoutmenu a{
+    width: 100%;
+    
+    color: #000;
+   
+   
+
+    border-bottom: 1px solid black;
+    margin: 10px;
+}
+.popoutmenu a:hover{
+    background-color:#9C7A4F;
+}
+
+/* Responsive Styles */
+.fancy{
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 15px;
+    text-transform: uppercase;
+}
+
+@media (max-width: 990px) {
+    .container {
+        display: none !important;
+    }
+    
+    .sidebutton {
+        display: flex;
+    }
+}
+@media (max-width:950px){
+    .fancy{
+        font-size: 1.5rem;
+    }
+}
+@media (max-width:425px){
+    .fancy{
+        font-size: .95rem;
+    }
+    .sidebutton{
+        width: 25%;
+        margin-left: 75%;
+    }
+    .popoutmenu{
+        width: 25%;
+        margin-left: 75%;
     }
 }
 
@@ -668,18 +790,39 @@ background: linear-gradient(0deg, #B68C57 0%, #806748 100%);
 </style>
 
 <body>
-    <div class="container blue circleBehind">
-        <a href="" onclick="aboutme(event)">ABOUT ME</a>
-        <a href="" onclick="work(event)">MY WORKS</a>
-        <a href="#" ref="" 
-            id="resume">RESUME</a>
-        <a onclick="experience(event)">EXPERIENCE</a>
-        <a onclick="contactme(event)">CONTACT</a>
+  
         
+    <div class="navbar">
+        <div class="container blue circleBehind">
+            <a href="" onclick="aboutme(event)">ABOUT ME</a>
+            <a href="" onclick="work(event)">MY WORKS</a>
+            <a href="#" id="resume">RESUME</a>
+            <a href="" onclick="experience(event)">EXPERIENCE</a>
+            <a href="" onclick="contactme(event)">CONTACT</a>
+        </div>
+        <div class="sidebutton">
+            <div class="burger">
+                <span class="piece"></span>
+                <span class="piece"></span>
+                <span class="piece"></span>
+            </div>
+        </div>
+        <div class="popoutmenu">
+            <a href="" onclick="aboutme(event)">ABOUT ME</a>
+            <a href="" onclick="work(event)">MY WORKS</a>
+            <a href="#" id="resume">RESUME</a>
+            <a href="" onclick="experience(event)">EXPERIENCE</a>
+            <a href="" onclick="contactme(event)">CONTACT</a>
+        </div>
+        <script src="js files\navbar.js"></script>
     </div>
+    
+      
+    
 
     <div class="mainheading">
-        <h1 class="fancy">Here's in my Sprint</h1>
+        <h1 class="fancy"><pre>Here , in my Sprint</pre></h1>
+        <script src="js files\mainhead.js"></script>
     </div>
     <div class="main" id="mainhai">
         <div class="mainleft">
