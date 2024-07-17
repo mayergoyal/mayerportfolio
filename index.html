@@ -7,6 +7,7 @@
     <title>MG portfolio</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css files\mywork.css">
 
 </head>
 <style>
@@ -220,7 +221,7 @@
     .experience {
         display: none;
         flex-direction: flex;
-
+padding: 35px;
 
         justify-content: space-between;
 
@@ -831,7 +832,22 @@ background: linear-gradient(0deg, #B68C57 0%, #806748 100%);
     align-items: center;
     justify-content: center;
 }
-
+@media (max-width:620px){
+    .experience{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .firstrow{
+        margin: 0;
+        padding: 0;
+        
+    }
+}
+.myworks{
+    display: none;
+}
 </style>
 
 <body>
@@ -840,10 +856,10 @@ background: linear-gradient(0deg, #B68C57 0%, #806748 100%);
     <div class="navbar">
         <div class="container blue circleBehind">
             <a href="" onclick="aboutme(event)" class="aboutmenav">ABOUT ME</a>
-            <a href="" onclick="work(event)" class="myworksnav">MY WORKS</a>
+            <a href="" onclick="work()" class="myworksnav">MY WORKS</a>
             <a href="#" id="resume">RESUME</a>
-            <a href="" onclick="experience(event)" class="experiencenav">EXPERIENCE</a>
-            <a href="" onclick="contactme(event)" class="contactnav">CONTACT</a>
+            <a href="" onclick="experience()" class="experiencenav">EXPERIENCE</a>
+          <!--  <a href="" onclick="contactme(event)" class="contactnav">CONTACT</a>-->
         </div>
         <div class="sidebutton">
             <div class="burger">
@@ -854,10 +870,10 @@ background: linear-gradient(0deg, #B68C57 0%, #806748 100%);
         </div>
         <div class="popoutmenu">
             <a href="" onclick="aboutme(event)" class="aboutmenav">ABOUT ME</a>
-            <a href="" onclick="work(event)" class="myworksnav">MY WORKS</a>
+            <a href="" onclick="work()" class="myworksnav">MY WORKS</a>
             <a href="#" id="resume">RESUME</a>
-            <a href="" onclick="experience(event)" class="experiencenav">EXPERIENCE</a>
-            <a href="" onclick="contactme(event)" class="contactnav">CONTACT</a>
+            <a href="" onclick="experience()" class="experiencenav">EXPERIENCE</a>
+           <!--  <a href="" onclick="contactme(event)" class="contactnav">CONTACT</a>-->
         </div>
         <script src="js files\navbar.js"></script>
       <!-- <script src="js files\routes.js"></script>-->
@@ -872,6 +888,99 @@ background: linear-gradient(0deg, #B68C57 0%, #806748 100%);
     </div>
     <div class="main" id="mainhai">
         <div class="mainleft">
+            <div class="myworks">
+                
+                <div class="workheading">
+                    <h3>My Works </h3>
+                </div>
+                <div class="projects">
+                    <div class="projecthead">
+                        <h5>PROJECTS</h5>
+                    </div>
+                    <div class="row">
+                        <div class="circle">
+                             <div class="backimg">
+                                <i class="fa-solid fa-train fa-3x"></i>
+                             </div>
+                             <div class="writeup">
+                                <span>Metro Project</span>
+                                <div class="para">
+                                    Created a <b>C++</b> project in College Academia using advanced algorithms and data structures with watchable UI and dataset . Implemented File Handling for User login and sign up and for storing other data like to set real world scenario.
+
+                                </div>
+                                <div class="links">
+                                    <a href="https://github.com/mayergoyal/metro-system"><i class="fa-brands fa-github"></i></a>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="circle">
+                            <div class="backimg">
+                                <i class="fa-solid fa-user-doctor fa-3x"></i>
+                             </div>
+                             <div class="writeup">
+                                <span>Cognition & Mental Health Diagnosis</span>
+                                <div class="para">
+                                    Created a <b>Web Site</b>  for the diagnosis of Cognitive and mental disorders through non-clinical tests and questionnaries in gamified format . Creates User profile and marks his performance . Created with basic html/css/js /express/mongodb /node js . This project was a part of my summer <b>DRID inhouse Internship</b>
+
+                                </div>
+                                <div class="links">
+                                    <a href="https://github.com/mayergoyal/cognition-and-mental-illness"><i class="fa-brands fa-github"></i></a>
+                                    <a href=""><i class="fa-solid fa-link"></i></a>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="circle">
+                            <div class="backimg">
+                                <i class="fa-solid fa-user fa-3x"></i>
+                             </div>
+                             <p class="writeup"></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="circle">
+                            <div class="backimg">
+                                <i class="fa-solid fa-cow fa-3x"></i>
+                             </div>
+                             <p class="writeup"></p>
+                        </div>
+                        <div class="circle">
+                            <div class="backimg">
+                                <i class="fa-solid fa-rocket fa-3x"></i>
+                             </div>
+                             <p class="writeup"></p>
+                        </div>
+                        <div class="circle">
+                            <div class="backimg">
+                                <i class="fa-solid fa-chalkboard-user fa-3x"></i>
+                             </div>
+                             <p class="writeup"></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="circle">
+                            <div class="backimg">
+                                <i class="fa-brands fa-youtube fa-3x"></i>
+                             </div>
+                             <p class="writeup"></p>
+                        </div>
+                        <div class="circle">
+                            <div class="backimg">
+                                <i class="fa-solid fa-seedling fa-3x"></i>
+                             </div>
+                             <p class="writeup"></p>
+                        </div>
+                        <div class="circle">
+                            <div class="backimg">
+                                <i class="fa-solid fa-mug-hot fa-3x"></i>
+                             </div>
+                             <p class="writeup"></p>
+                        </div>
+                    </div>
+                </div>
+                <script src="js files\myworks.js"></script>
+            </div>
             <div class="intro">
                 
                 <div class="aboutlit">
@@ -1129,7 +1238,7 @@ background: linear-gradient(0deg, #B68C57 0%, #806748 100%);
 
 
             </div>
-            <div class="contact">
+            <!--<div class="contact">
                 <h3 class="contactheading" style="margin:20px;">
                       CONTACT ME 
                 </h3>
@@ -1141,12 +1250,40 @@ background: linear-gradient(0deg, #B68C57 0%, #806748 100%);
                 
 
 
-            </div>
+            </div>-->
         </div>
 
     </div>
 
     <script>
+        function experience() {
+            event.preventDefault();
+    const introsec = document.querySelector(".intro");
+    const myworkss = document.querySelector(".myworks");
+    const exp = document.querySelector(".experience");
+
+    if (introsec) {
+        introsec.style.display = "none";
+        console.log("Intro section hidden");
+    } else {
+        console.error("Intro section not found");
+    }
+
+    if (myworkss) {
+        myworkss.style.display = "none";
+        console.log("My works section hidden");
+    } else {
+        console.error("My works section not found");
+    }
+
+    if (exp) {
+        exp.style.display = "flex";
+        console.log("Experience section displayed");
+    } else {
+        console.error("Experience section not found");
+    }
+}
+
        var globalexperience = document.querySelector(".experience");
         var globalhackathons = document.querySelector(".hackathons");
         var globalcoding = document.querySelector(".coding");
@@ -1159,7 +1296,7 @@ background: linear-gradient(0deg, #B68C57 0%, #806748 100%);
         var globaldescription = document.querySelector(".description");
         var c = 0;
 
-        function contactme(event) {
+        /*function contactme(event) {
             c = 1;
             let contactdetails=document.querySelector(".contact");
             contactdetails.style.display="flex";
@@ -1185,7 +1322,7 @@ background: linear-gradient(0deg, #B68C57 0%, #806748 100%);
             contactdetails.style.transition = "transform 1s ease";
     contactdetails.style.transform = "translateY(-500px)";
 
-        }
+        }*/
         writerbutton.onclick = function () {
             globalwriter.style.display = "flex";
         }
@@ -1240,128 +1377,18 @@ background: linear-gradient(0deg, #B68C57 0%, #806748 100%);
         }
 
 
-        function experience(event) {
-            let contactdetails=document.querySelector(".contact");
-            contactdetails.style.display="none";
-            let element = globalmainleft;
-            if (element) {
-                element.innerHTML = "";
-                let ref = globalexperience;
-                ref.style.display = "flex";
-                element.appendChild(ref);
+     
+       const aboutmenav=document.querySelector(".aboutmenav");
+       aboutmenav.onclick=function(){
+        const introsec=document.querySelector(".intro");
+        const myworkss=document.querySelector("myworks");
+        introsec.style.display="flex";
+        myworkss.style.display="none";
+        const  exp=document.querySelector(".experience");
+        exp.style.display="none";
+       }
 
-            }
-            else {
-                console.error("main left is no more ");
-            }
-            if (c != 0) {
-                c=0;
-                let ele = document.querySelector(".description");
-            ele.style.transition ="transform 2s ease";
-            ele.style.transform="translateX(60px)";                                                         // transition: transform 2s ease;
-          //  transform: translateX(60px);
-
-                let image = document.querySelector(".imgbd "); // Assuming .imgbd contains an img element
-                if (image) {
-                    image.src = 'newm.jpeg';
-                    image.alt = '';
-                  
-                    image.style.borderRadius = "100%";
-                    image.style.opacity = ".7";
-                    console.log("sahi h sab");
-                }
-                else {
-                    console.error("gadbad hai image m");
-                }
-
-            }
-        }
-        function work(event) {
-            event.preventDefault(); // Prevent the default link behavior
-            let contactdetails=document.querySelector(".contact");
-            contactdetails.style.display="none";
-            // Perform custom actions
-            let element = globalmainleft;
-
-            if (element) {
-                element.innerHTML = ""; // Clear the existing content
-                element.innerHTML = "<img src='myworks.png' class='imge' alt='My Works'>";
-                let newo = document.querySelector(".imge");
-                if (newo) {
-                    newo.style.height = "100%";
-                    newo.style.width = "100%";
-                    // newo.style.border-radius= "70%"; // Assuming you meant to set the width here
-                } else {
-                    console.error("Image element not found");
-                }
-                // Add new content
-            } else {
-                console.error("Element with class 'mainleft' not found");
-            }
-            if (c != 0) {
-                c=0;
-                let ele = document.querySelector(".description");
-            ele.style.transition ="transform 2s ease";
-            ele.style.transform="translateX(60px)";                                                         // transition: transform 2s ease;
-          //  transform: translateX(60px);
-
-                let image = document.querySelector(".imgbd "); // Assuming .imgbd contains an img element
-                if (image) {
-                    image.src = 'newm.jpeg';
-                    image.alt = '';
-                  
-                    image.style.borderRadius = "100%";
-                    image.style.opacity = ".7";
-                    console.log("sahi h sab");
-                }
-                else {
-                    console.error("gadbad hai image m");
-                }
-
-            }
-
-        }
        
-        function aboutme(event) {
-            event.preventDefault(); // Prevent the default link behavior if applicable
-            let contactdetails=document.querySelector(".contact");
-            contactdetails.style.display="none";
-            let element = globalmainleft;
-            if (element) {
-                let about = globalintro;
-                if (about) {
-                    let aboutClone = about.cloneNode(true); // Clone the intro element
-                    element.innerHTML = ""; // Clear the existing content
-                    element.appendChild(aboutClone); // Append the cloned element
-                } else {
-                    console.error("Element with class 'intro' not found");
-                }
-            } else {
-                console.error("Element with class 'mainleft' not found");
-            }
-            if (c != 0) {
-                c=0;
-                let ele = document.querySelector(".description");
-            ele.style.transition ="transform 2s ease";
-            ele.style.transform="translateX(60px)";                                                         // transition: transform 2s ease;
-          //  transform: translateX(60px);
-
-                let image = document.querySelector(".imgbd "); // Assuming .imgbd contains an img element
-                if (image) {
-                    image.src = 'newm.jpeg';
-                    image.alt = '';
-                  
-                    image.style.borderRadius = "100%";
-                    image.style.opacity = ".7";
-                    console.log("sahi h sab");
-                }
-                else {
-                    console.error("gadbad hai image m");
-                }
-
-            }
-        }
-
 
 
 
