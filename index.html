@@ -784,8 +784,53 @@ background: linear-gradient(0deg, #B68C57 0%, #806748 100%);
         margin-left: 75%;
     }
 }
+.main{
+    display: flex;
+    flex-direction: row;
+    
+}
+@media (max-width:950px){
+    .main{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 70%;
+        width: 100%;
+    }
+    .nav{
+        height: 10%;
+    }
+    .mainheading{
+        height:20%;
+    }
+    .mainleft{
+        width: 100%;
+        height: 35%;
+    }
+    
+    .aboutlit{
+        width: 100%;
+        height: auto;
+        margin: 0;
+        padding: 0;
+        margin-left: 30%;
+    }
+   .aboutme{
+    width: auto;
+    transform: translateY(400px);
+   
+   }
+   
 
 
+}
+.description{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 
 </style>
 
@@ -794,11 +839,11 @@ background: linear-gradient(0deg, #B68C57 0%, #806748 100%);
         
     <div class="navbar">
         <div class="container blue circleBehind">
-            <a href="" onclick="aboutme(event)">ABOUT ME</a>
-            <a href="" onclick="work(event)">MY WORKS</a>
+            <a href="" onclick="aboutme(event)" class="aboutmenav">ABOUT ME</a>
+            <a href="" onclick="work(event)" class="myworksnav">MY WORKS</a>
             <a href="#" id="resume">RESUME</a>
-            <a href="" onclick="experience(event)">EXPERIENCE</a>
-            <a href="" onclick="contactme(event)">CONTACT</a>
+            <a href="" onclick="experience(event)" class="experiencenav">EXPERIENCE</a>
+            <a href="" onclick="contactme(event)" class="contactnav">CONTACT</a>
         </div>
         <div class="sidebutton">
             <div class="burger">
@@ -808,13 +853,14 @@ background: linear-gradient(0deg, #B68C57 0%, #806748 100%);
             </div>
         </div>
         <div class="popoutmenu">
-            <a href="" onclick="aboutme(event)">ABOUT ME</a>
-            <a href="" onclick="work(event)">MY WORKS</a>
+            <a href="" onclick="aboutme(event)" class="aboutmenav">ABOUT ME</a>
+            <a href="" onclick="work(event)" class="myworksnav">MY WORKS</a>
             <a href="#" id="resume">RESUME</a>
-            <a href="" onclick="experience(event)">EXPERIENCE</a>
-            <a href="" onclick="contactme(event)">CONTACT</a>
+            <a href="" onclick="experience(event)" class="experiencenav">EXPERIENCE</a>
+            <a href="" onclick="contactme(event)" class="contactnav">CONTACT</a>
         </div>
         <script src="js files\navbar.js"></script>
+      <!-- <script src="js files\routes.js"></script>-->
     </div>
     
       
@@ -822,7 +868,7 @@ background: linear-gradient(0deg, #B68C57 0%, #806748 100%);
 
     <div class="mainheading">
         <h1 class="fancy"><pre>Here , in my Sprint</pre></h1>
-        <script src="js files\mainhead.js"></script>
+    
     </div>
     <div class="main" id="mainhai">
         <div class="mainleft">
@@ -1275,17 +1321,7 @@ background: linear-gradient(0deg, #B68C57 0%, #806748 100%);
             }
 
         }
-       /* function download(event) {
-            let ans = confirm("Wanna download my resume?");
-            if (ans) {
-                let res = document.createElement('a');
-                res.href = 'mayer ka resume technical.pdf';
-                res.download = 'mayer ka resume technical.pdf';
-                document.body.appendChild(res);
-                res.click();
-                document.body.removeChild(res);
-            }
-        }*/
+       
         function aboutme(event) {
             event.preventDefault(); // Prevent the default link behavior if applicable
             let contactdetails=document.querySelector(".contact");
@@ -1325,9 +1361,15 @@ background: linear-gradient(0deg, #B68C57 0%, #806748 100%);
 
             }
         }
+
+
+
+
+
+
        
 
-
+    
 
     </script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script
