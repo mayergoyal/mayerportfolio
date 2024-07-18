@@ -9,7 +9,7 @@ circles.forEach(element => {
             // Set this element as active
             activeElement = element;
             element.style.zIndex = "100000";
-            element.style.backgroundColor = "#806748";
+            element.style.backgroundColor = "#c8b083";
             element.style.width = "65%";
             element.style.height = "20rem";
             element.style.padding = "2rem";
@@ -36,7 +36,7 @@ circles.forEach(element => {
             // Set the new active element
             activeElement = element;
             element.style.zIndex = "100000";
-            element.style.backgroundColor = "#806748";
+            element.style.backgroundColor = "#c8b083";
             element.style.width = "65%";
             element.style.height = "20rem";
             element.style.padding = "2rem";
@@ -45,7 +45,7 @@ circles.forEach(element => {
     }
 });
 
-function work(){
+function work(event){
     event.preventDefault();
     const introsec = document.querySelector(".intro");
     const myworkss = document.querySelector(".myworks");

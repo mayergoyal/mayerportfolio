@@ -8,6 +8,7 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="css files\mywork.css">
+    <link rel="stylesheet" href="css files\footer.css">
 
 </head>
 <style>
@@ -17,6 +18,7 @@
         flex-direction: column;
 
     }
+
 
     .aboutme {
         margin: 100px;
@@ -40,17 +42,15 @@
         border-radius: 100%;
         opacity: .7;
         margin-top: 0;
+        padding:5px;
+        border: 3px solid black;
     }
 
     /*.intro {
         position: relative;
         display: inline-block;
     }*/
-    .intro{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+   
 
     .aboutlit {
         border: 2px solid #705634;
@@ -832,22 +832,109 @@ background: linear-gradient(0deg, #B68C57 0%, #806748 100%);
     align-items: center;
     justify-content: center;
 }
-@media (max-width:620px){
-    .experience{
+
+    @media (max-width: 620px) {
+    .experience {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        transition: transform 0.3s ease;
     }
-    .firstrow{
+
+    .experience:hover {
+        transform: translate(-30px, -30px);
+    }
+
+    .firstrow {
         margin: 0;
         padding: 0;
-        
+    }
+
+    .experienceifflex {
+        display: flex; /* Ensure it stays flex */
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .firstrowifflex {
+        margin: 0;
+        padding: 0;
     }
 }
+
 .myworks{
     display: none;
 }
+.cow{
+    font-size: 3rem;
+    color: black;
+}
+@media (max-width:950px){
+    .mainleft{
+        width: 55%;
+    }
+    .aboutme{
+        width: 25%;
+       
+    }
+    .footer{
+        width: 20%;
+        width: 100%;
+        height: auto;
+    }
+    .description{
+        width: 80vw;
+        height: auto;
+    }
+
+}
+
+@media (max-width:950px){
+    .aboutme{
+        transform: translateY(-50px);
+        margin: 25px;
+    }
+}
+.aboutme{
+    margin-left: 10%;
+}
+@media (max-width:920px){
+    .mainleft{
+        width: 100vw;
+    }
+}
+.popoutmenu{
+    margin-left: 0;
+    width: 100vw;
+}
+
+/*
+.newabout{
+    transform: translate(-100px, 60px);
+    margin: 0;
+   
+    margin-left: 5px;
+    width:80vw;
+}*/
+.intro{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: cursive !important;
+    }
+    body{
+        font-family: cursive !important;
+    }
+    .imgbd{
+        transition: transform .5s ease;
+    }
+    .imgbd:hover{
+        transform:scale(.89);
+    }
+
+
 </style>
 
 <body>
@@ -856,8 +943,8 @@ background: linear-gradient(0deg, #B68C57 0%, #806748 100%);
     <div class="navbar">
         <div class="container blue circleBehind">
             <a href="" onclick="aboutme(event)" class="aboutmenav">ABOUT ME</a>
-            <a href="" onclick="work()" class="myworksnav">MY WORKS</a>
-            <a href="#" id="resume">RESUME</a>
+            <a href="" onclick="work(event)" class="myworksnav">MY WORKS</a>
+            <a href="https://docs.google.com/document/d/1xc3X9yszsIKJJ_P0WG0eLIJx5u76kpDfSYaAnqYEtcw/edit?usp=sharing" id="resume">RESUME</a>
             <a href="" onclick="experience()" class="experiencenav">EXPERIENCE</a>
           <!--  <a href="" onclick="contactme(event)" class="contactnav">CONTACT</a>-->
         </div>
@@ -870,8 +957,8 @@ background: linear-gradient(0deg, #B68C57 0%, #806748 100%);
         </div>
         <div class="popoutmenu">
             <a href="" onclick="aboutme(event)" class="aboutmenav">ABOUT ME</a>
-            <a href="" onclick="work()" class="myworksnav">MY WORKS</a>
-            <a href="#" id="resume">RESUME</a>
+            <a href="" onclick="work(event)" class="myworksnav">MY WORKS</a>
+            <a href="https://docs.google.com/document/d/1xc3X9yszsIKJJ_P0WG0eLIJx5u76kpDfSYaAnqYEtcw/edit?usp=sharing" id="resume">RESUME</a>
             <a href="" onclick="experience()" class="experiencenav">EXPERIENCE</a>
            <!--  <a href="" onclick="contactme(event)" class="contactnav">CONTACT</a>-->
         </div>
@@ -905,11 +992,11 @@ background: linear-gradient(0deg, #B68C57 0%, #806748 100%);
                              <div class="writeup">
                                 <span>Metro Project</span>
                                 <div class="para">
-                                    Created a <b>C++</b> project in College Academia using advanced algorithms and data structures with watchable UI and dataset . Implemented File Handling for User login and sign up and for storing other data like to set real world scenario.
+                                    Created a <b>C++</b> project  using advanced algorithms and data structures . Implemented File Handling for User login and sign up and for storing other data like to set real world scenario.
 
                                 </div>
                                 <div class="links">
-                                    <a href="https://github.com/mayergoyal/metro-system"><i class="fa-brands fa-github"></i></a>
+                                    <a href="https://github.com/mayergoyal/metro-system"><i class="fa-brands fa-github fa-2x"></i></a>
 
                                 </div>
                             </div>
@@ -919,14 +1006,13 @@ background: linear-gradient(0deg, #B68C57 0%, #806748 100%);
                                 <i class="fa-solid fa-user-doctor fa-3x"></i>
                              </div>
                              <div class="writeup">
-                                <span>Cognition & Mental Health Diagnosis</span>
+                                <span>Cognition & Mental Health Diagnosis</span><br>
                                 <div class="para">
-                                    Created a <b>Web Site</b>  for the diagnosis of Cognitive and mental disorders through non-clinical tests and questionnaries in gamified format . Creates User profile and marks his performance . Created with basic html/css/js /express/mongodb /node js . This project was a part of my summer <b>DRID inhouse Internship</b>
-
+                                    A <b>Web Site</b>  for the diagnosis of Cognitive and mental disorders through non-clinical tests and questionnaries by gamifying the procedure . 
                                 </div>
                                 <div class="links">
-                                    <a href="https://github.com/mayergoyal/cognition-and-mental-illness"><i class="fa-brands fa-github"></i></a>
-                                    <a href=""><i class="fa-solid fa-link"></i></a>
+                                    <a href="https://github.com/mayergoyal/cognition-and-mental-illness"><i class="fa-brands fa-github fa-2x"></i></a>
+                                    <a href=""><i class="fa-solid fa-link fa-2x"></i></a>
 
                                 </div>
                             </div>
@@ -935,27 +1021,66 @@ background: linear-gradient(0deg, #B68C57 0%, #806748 100%);
                             <div class="backimg">
                                 <i class="fa-solid fa-user fa-3x"></i>
                              </div>
-                             <p class="writeup"></p>
+                             <div class="writeup">
+                                <span>Portfolio Website</span>
+                                <div class="para">
+                                    Created <b>self Portfolio</b> ,all through html/css/js. Included everythng that fascinates me in keeping myself indulge surfing in this ocrean of life..
+
+                                </div>
+                                <div class="links">
+                                    <a href="https://github.com/mayergoyal/mayerportfolio"><i class="fa-brands fa-github fa-2x"></i></a>
+                                    <a href="https://mayerportfolio.vercel.app/"><i class="fa-solid fa-link fa-2x"></i></a>
+
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="circle">
                             <div class="backimg">
-                                <i class="fa-solid fa-cow fa-3x"></i>
+                                <i class="cow">🐃</i>
                              </div>
-                             <p class="writeup"></p>
+                             <div class="writeup">
+                                <span>The Rustic Puzzle</span>
+                                <div class="para">
+                                    Created a <b>C++</b> project which is a gaming project including various challenges/puzzles seprated in different levels . Problems are based on rustic theme , solved using various algorithms and data structures.
+                                </div>
+                                <div class="links">
+                                    <a href="https://github.com/mayergoyal/The-Rustic-puzzle"><i class="fa-brands fa-github fa-2x"></i></a>
+                                   
+
+                                </div>
+                            </div>
                         </div>
                         <div class="circle">
                             <div class="backimg">
                                 <i class="fa-solid fa-rocket fa-3x"></i>
                              </div>
-                             <p class="writeup"></p>
+                             <div class="writeup">
+                                <span>JSCOP : Aurora </span>
+                                <div class="para">
+                                    Created a <b>Web site</b> for the JSCOP ' 24 event of Optica in a inhouse hackathon . Included all dynamic and necessary features for the event consideration                  </div>
+                                <div class="links">
+                                    <a href="https://github.com/mayergoyal/team-spectrum-optica-internal-hackathon"><i class="fa-brands fa-github fa-2x"></i></a>
+                                    <a href="https://team-spectrum-optica-internal-hackathon.vercel.app/"><i class="fa-solid fa-link fa-2x"></i></a>
+
+                                </div>
+                            </div>
                         </div>
                         <div class="circle">
                             <div class="backimg">
                                 <i class="fa-solid fa-chalkboard-user fa-3x"></i>
                              </div>
-                             <p class="writeup"></p>
+                             <div class="writeup">
+                                <span>Virtual Teaching </span>
+                                <div class="para">
+                                    Gamifying virtual teaching involves using game elements like points, badges, leaderboards, and challenges to enhance student engagement and motivation.</div>
+                                <div class="links">
+                                    <a href="https://github.com/mayergoyal/virtual-teaching-project"><i class="fa-brands fa-github fa-2x"></i></a>
+                                    <a href="https://virtual-teaching-project.vercel.app/"><i class="fa-solid fa-link fa-2x"></i></a>
+
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="row">
@@ -963,23 +1088,74 @@ background: linear-gradient(0deg, #B68C57 0%, #806748 100%);
                             <div class="backimg">
                                 <i class="fa-brands fa-youtube fa-3x"></i>
                              </div>
-                             <p class="writeup"></p>
+                             <div class="writeup">
+                                <span>You-Tube Clone </span>
+                                <div class="para">
+                                    Created You-tube clone using react and mongodb in my Internship in Null Class . Integrated Client and Server end single handedly 
+                                </div>
+                                <div class="links">
+                                   
+                                </div>
+                            </div>
                         </div>
                         <div class="circle">
                             <div class="backimg">
                                 <i class="fa-solid fa-seedling fa-3x"></i>
                              </div>
-                             <p class="writeup"></p>
+                             <div class="writeup">
+                                <span>Krishi Konnect</span>
+                                <div class="para">
+                                    Krishi Konnect , a web site for farmers , including various features like e -mandi , ai tools for seed detection , krishi-gram , agro store near me and many more ....</div>
+                                <div class="links">
+                                    <a href="https://github.com/mayergoyal/Krishi-Konnect"><i class="fa-brands fa-github fa-2x"></i></a>
+                                    <!--<a href="https://virtual-teaching-project.vercel.app/"><i class="fa-solid fa-link fa-2x"></i></a>-->
+
+                                </div>
+                            </div>
                         </div>
                         <div class="circle">
                             <div class="backimg">
                                 <i class="fa-solid fa-mug-hot fa-3x"></i>
                              </div>
-                             <p class="writeup"></p>
+                             <div class="writeup">
+                                <span>E-com Coffee</span>
+                                <div class="para">
+                                    Created a web site as a college project in third sem .From user inclination to user interaction through ai chat bot to google map tracking to product advanced marketting and its safe transaction .  </div>
+                                <!--<div class="links">
+                                    <a href="https://github.com/mayergoyal/Krishi-Konnect"><i class="fa-brands fa-github fa-2x"></i></a>
+                                    <a href="https://virtual-teaching-project.vercel.app/"><i class="fa-solid fa-link fa-2x"></i></a>
+
+                                </div>-->
+                            </div>
                         </div>
                     </div>
                 </div>
+                <div class="internships">
+                    <div class="projecthead">
+                        <h3>Internships</h3>
+                    </div>
+                    <div class="row">
+                        <div class="square">
+                            <img src="Logo-jiit.png" alt="">
+                            <div class="internabout">
+                                <div class="internititle">DRID INHOUSE INTERNSHIP'24</div>
+                                <p>Worked on Cognition and Mental Health Illness and incorporated tests virtually</p>
+                                <p>May-24 - July-24</p>
+                            </div>
+                        </div>
+                        <div class="square">
+                            <img src="null class.png" alt="">
+                            <div class="internabout">
+                                <div class="internititle">NULL CLASS SUMMER '24</div>
+                                <p>Worked on real time projects like you tube , joined as Full Stack Web Developer</p>
+                                <p>June-24 - July-24</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
                 <script src="js files\myworks.js"></script>
+                <script src="js files\aboutme.js"></script>
             </div>
             <div class="intro">
                 
@@ -1238,24 +1414,122 @@ background: linear-gradient(0deg, #B68C57 0%, #806748 100%);
 
 
             </div>
-            <!--<div class="contact">
-                <h3 class="contactheading" style="margin:20px;">
-                      CONTACT ME 
-                </h3>
-                <button class="custom-btn btn-6" style="margin:15px;"><span> <a href="tel:7017815075">7017815075</a></span></button>
-                <button class="custom-btn btn-6" style="margin:15px;"><span><a href="mailto:goyalmayer2@gmail.com">GOYALMAYER2@GMAIL.COM</a></span></button>
-                <h4 style="margin:20px;">Through platforms :- </h4>
-                <button class="custom-btn btn-3" style="margin:15px;"><span><a href="https://www.linkedin.com/in/mayer-goyal-07a58527a/"> LinkedIn <i class="fa-brands fa-linkedin"></i> </a>   </span></button>
-                <button class="custom-btn btn-3" style="margin:15px;"><span> <a href="https://github.com/mayergoyal">Github <i class="fa-brands fa-github"></i></a> </span></button>
-                
-
-
-            </div>-->
+           
         </div>
+        
 
+    </div>
+    <div class="footer">
+        <div class="leftfooter">
+            <div class="getin">
+                Get in Touch
+            </div>
+            <p class="leftp">
+                Everything happens for a cause , you got into here , so take its cause to its extremity . <span>Connect through</span>
+            </p>
+            <div class="iconbox">
+                <a href="" class="icons"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="" class="icons"><i class="fa-brands fa-github"></i></a>
+                <a href="" class="icons"><i class="fa-brands fa-square-instagram"></i></a>
+            </div>
+        </div>
+        <div class="rightfooter">
+            <div class="box">
+                <div class="in">
+
+                </div>
+                <div class="out">
+                    <a href="tel:7017815075"><i class="fa-solid fa-phone fa-4x"></i></a>
+
+                </div>
+            </div>
+            <div class="box">
+                <div class="in">
+
+                </div>
+                <div class="out">
+                    <a href="mailto:goyalmayer2@gmail.com" class="mail">📩</a>
+
+                </div>
+            </div>
+        </div>
     </div>
 
     <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const introsec = document.querySelector(".intro");
+    const myworkss = document.querySelector(".myworks");
+    const exp = document.querySelector(".experience");
+
+    if (introsec) {
+        introsec.style.display = "flex";
+        console.log("Intro section hidden");
+    } else {
+        console.error("Intro section not found");
+    }
+
+    if (myworkss) {
+        myworkss.style.display = "none";
+        console.log("My works section hidden");
+    } else {
+        console.error("My works section not found");
+    }
+
+    if (exp) {
+        exp.style.display = "none";
+        console.log("Experience section displayed");
+    } else {
+        console.error("Experience section not found");
+    }
+    
+        });
+          function aboutme(event){
+    event.preventDefault();
+    console.log("hey i m in");
+    const introsec = document.querySelector(".intro");
+    const myworkss = document.querySelector(".myworks");
+    const exp = document.querySelector(".experience");
+
+    if (introsec) {
+        introsec.style.display = "flex";
+        console.log("Intro section hidden");
+    } else {
+        console.error("Intro section not found");
+    }
+
+    if (myworkss) {
+        myworkss.style.display = "none";
+        console.log("My works section hidden");
+    } else {
+        console.error("My works section not found");
+    }
+
+    if (exp) {
+        exp.style.display = "none";
+        console.log("Experience section displayed");
+    } else {
+        console.error("Experience section not found");
+    }
+
+    const navbar = document.querySelector(".navbar");
+        const mainhead = document.querySelector(".mainheading");
+        const mainpart = document.querySelector(".main");
+        const footer = document.querySelector(".footer");
+
+        navbar.style.height = "10%";
+        mainhead.style.height = "10%";
+        footer.style.height = "10%";
+        mainpart.style.height = "70%";
+
+        const aboutlit = document.querySelector(".aboutlit");
+        const description = document.querySelector(".description");
+        aboutlit.style.transform = "translateY(150px)";
+        description.style.transform = "translateY(80px)";
+        footer.style.transform="translateY(480px)"
+        aboutlit.style.marginLeft="0";
+        aboutlit.style.width="80vw";
+        aboutlit.style.padding="0";
+}
         function experience() {
             event.preventDefault();
     const introsec = document.querySelector(".intro");
@@ -1296,33 +1570,7 @@ background: linear-gradient(0deg, #B68C57 0%, #806748 100%);
         var globaldescription = document.querySelector(".description");
         var c = 0;
 
-        /*function contactme(event) {
-            c = 1;
-            let contactdetails=document.querySelector(".contact");
-            contactdetails.style.display="flex";
-            contactdetails.style.flexDirection="column";
-            
-            var left = document.querySelector(".mainleft");
-            left.innerHTML = "";
-            let ele = document.querySelector(".description");
-            ele.style.transition ="transform 1s ease";
-            ele.style.transform="translate(-600px)";  
-            let image = document.querySelector(".imgbd "); // Assuming .imgbd contains an img element
-            if (image) {
-                image.src = 'WhatsApp Image 2024-06-18 at 00.46.45_749f2b4a.jpg';
-                image.alt = '';
-                image.classList.toggle("newimageclass");
-                image.style.borderRadius = "100%";
-                image.style.opacity = "1";
-                console.log("sahi h sab");
-            }
-            else {
-                console.error("gadbad hai image m");
-            }
-            contactdetails.style.transition = "transform 1s ease";
-    contactdetails.style.transform = "translateY(-500px)";
-
-        }*/
+        
         writerbutton.onclick = function () {
             globalwriter.style.display = "flex";
         }
@@ -1388,6 +1636,27 @@ background: linear-gradient(0deg, #B68C57 0%, #806748 100%);
         exp.style.display="none";
        }
 
+       /*document.addEventListener('DOMContentLoaded', function () {
+            const experienceElement = document.querySelector('.experience');
+
+           
+                if (window.getComputedStyle(experienceElement).display === 'flex') {
+                    experienceElement.classList.add('experienceifflex');
+                }
+              const firstrow=document.querySelector(".firstrow");
+              if(window.getComputedStyle(firstrow).display==flex){
+                firstrow.classList.toggle('firstrowifflex');
+              }
+        });*/
+       
+
+      const imgg=document.querySelector(".imgbd");
+      imgg.addEventListener('mouseover', function() {
+            imgg.src="dekho.jpg";
+        });
+        imgg.addEventListener('mouseout', function() {
+            imgg.src="newm.jpeg";
+        });
        
 
 
@@ -1399,6 +1668,9 @@ background: linear-gradient(0deg, #B68C57 0%, #806748 100%);
     
 
     </script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+   
+
+    
 </body>
 </html>
