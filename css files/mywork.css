@@ -129,8 +129,45 @@
     width: auto;
 }
 
-/*about me*/
+.circleme{
+   
+    border-radius: 100%;
+    border: 5px solid rgb(28, 197, 78);
+    width: 45%;
+    
+}
+.circleme img{
+    width: 100%;
+    height: 80%;
+    padding: 5px;
+    border-radius: 35%;
+    border: 3px solid #553e25 ;
+}
+.sqaureme{
+    background-color: #a0805b;
+    font-family: cursive;
+    width: 55%;
+}
+.rowx{
+    display: flex;
+    flex-direction: column;
+    
+    padding: 1.5rem;
+}
 
+
+.extrame {
+    width: 100%;
+    
+    
+}
+.elements{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20%;
+}
 
 
 
