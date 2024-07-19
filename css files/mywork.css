@@ -97,8 +97,8 @@
     margin: 12px;
 }
 .square{
-    margin: 2rem;
-    width: 35%;
+    margin: 20px;
+    width: 80%;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -111,7 +111,7 @@
     margin: 10px;
     padding: 10px;
     width: 100%;
-    height: 70%;
+    height: 15rem;
 
 }
 .internabout{
@@ -132,7 +132,7 @@
 .circleme{
    
     border-radius: 100%;
-    border: 5px solid rgb(28, 197, 78);
+    
     width: 45%;
     
 }
@@ -167,6 +167,49 @@
     justify-content: center;
     align-items: center;
     margin-left: 20%;
+}
+.backimg i{
+    margin: .85rem;
+}
+.internititle{
+    font-weight:bolder;
+}
+.iimg{
+    transition: transform .2s ease;
+}
+.iimg:hover{
+    transform: scale(.85);
+}
+.square:hover{
+    background-color: #806748;
+}
+.extrame{
+    width: 100%;
+    
+}
+.elements{
+   
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    
+}
+.sqaureme{
+    display: none;
+
+}
+.rowx{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.circleme{
+    margin: 5px;
+}
+.sqaureme{
+    transition: tranform .5s ease;
 }
 
 

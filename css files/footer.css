@@ -28,7 +28,7 @@
 }
 .getin{
     color: white;
-    padding: 10px;
+   padding: 10px;
     
 
 }
@@ -40,13 +40,15 @@
 .iconbox{
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
     padding: 10px;
    
 }
 .icons{
     width: auto;
     height: auto;
-    background-color: #c8b083;
+    background-color: transparent;
     transition: transform .2s ease;
     cursor: pointer;
     margin: 10px;
@@ -54,7 +56,7 @@
 
 }
 .icons:active{
-    transform: scale(.95);
+    transform: scale(.85);
 }
 .box{
    
@@ -89,4 +91,13 @@
 }
 .mail{
     font-size: 4rem;
+}
+.getin{
+    width: 70%;
+    font-size: 2rem;
+    height: auto;
+}
+.leftp{
+    font-weight: bolder;
+    opacity: 1 !important;
 }

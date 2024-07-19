@@ -72,3 +72,35 @@ function work(event){
         console.error("Experience section not found");
     }
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+    const circleme = document.querySelectorAll(".circleme");
+    const squareme = document.querySelectorAll(".sqaureme");
+
+    if (circleme && squareme) {
+        circleme.forEach(element => {
+            element.addEventListener('mouseover', function() {
+                
+                element.style.cursor = "pointer";
+                squareme.forEach(ele => {
+                    ele.style.display = "flex";
+               ele.style.transform = "translateY(-100px)";
+                });
+                
+            });
+            element.addEventListener('mouseout', function() {
+                
+                element.style.cursor = "pointer";
+                squareme.forEach(ele => {
+                    ele.style.display = "none";
+               ele.style.transform = "translateY(-50px)";
+                });
+                
+            });
+        });
+       
+    } else {
+        console.error("Element not found");
+    }
+});
+
